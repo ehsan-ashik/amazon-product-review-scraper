@@ -1,1 +1,4 @@
-src/example_generated_data/* linguist-vendored
+example_generated_data/** linguist-vendored
+*.html linguist-vendored
+*.csv linguist-vendored
+*.json linguist-vendored
