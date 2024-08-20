@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "amazon-product-review-scraper"
+version = "0.1.0"
+description = "The app contains functionality to scrapes Amazon product reviews data based on applied filters, parse them, and saves to csv/JSON."
+authors = ["Ehsan Ul Haque"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "src/*.py" },
+    { include = "src/**/*.py" }
+]
+
+[tool.poetry.scripts]
+app = "src.app:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+beautifulsoup4 = "^4.12.3"
+my-fake-useragent = "^0.2.1"
+requests-html = "^0.10.0"
+lxml = "^5.2.2"
+lxml-html-clean = "^0.2.0"
+pandas = "^2.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
