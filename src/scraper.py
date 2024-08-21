@@ -13,9 +13,9 @@ from src.helpers.utils import export_to_file
 class Scraper:
     _save_dir: str
     _session: HTMLSession
-    _proxy: dict[str, str]
+    _proxy: Proxy
 
-    def __init__(self, session: HTMLSession, save_dir: str, proxy: dict[str, str] = None):
+    def __init__(self, session: HTMLSession, save_dir: str, proxy: Proxy = None):
         self._session = session
         self._save_dir = save_dir
         self._proxy = proxy
